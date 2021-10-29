@@ -21,6 +21,10 @@ module.exports = {
           451: '#3366ff'
         }
       },
+      fontFamily: {
+        'sans-custom': ['Inter', 'sans-serif'],
+        serif: ['Merriweather', 'serif'],
+      },
       spacing: {
         '128': '32rem',
         '144': '36rem',
