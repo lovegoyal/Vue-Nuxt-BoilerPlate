@@ -59,7 +59,7 @@
         </svg>
       </a>
       <div class="mt-8 bg-white overflow-hidden shadow sm:rounded-lg p-6">
-        <h2 class="btn font-sans-custom">Welcome to your Nuxt Application</h2>
+        <h2 class="btn font-sans-custom">{{ $t('login') }}</h2>
         <div class="color-custom-green">dnovovoi oj oijoi joi joi joi</div>
         <p class="mt-3 bg-blue-451">
           We recommend you take a look at the

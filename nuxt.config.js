@@ -34,7 +34,8 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    'nuxt-purgecss'
+    'nuxt-purgecss',
+    '@nuxtjs/composition-api/module'
   ],
   purgeCSS: {
     // your settings here
@@ -60,6 +61,31 @@ export default {
    },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    'portal-vue/nuxt',
+    [
+      'nuxt-i18n',
+      {
+        locales: [
+          {
+            code: 'en',
+            file: 'en.json'
+          },
+          {
+            code: 'hi',
+            file: 'hi.json'
+          }
+        ],
+        lazy: true,
+        langDir: 'locales/',
+        strategy: 'no_prefix',
+        defaultLocale: 'en',
+        detectBrowserLanguage: {
+          useCookie: true,
+          cookieKey: 'i18n_redirected'
+          // onlyOnRoot: true
+        }
+      }
+    ]
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
